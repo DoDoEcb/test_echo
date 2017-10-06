@@ -23,6 +23,141 @@ if(isset($_POST['set-login'])){
     }
 }
 ?>
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>ShopWebDesigner</title>
+    <meta name="description" content="Acessar Minha Conta" />
+    <meta name="Author" content="Bem Vindo ao Login" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- WEB FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="http://demoscriptbtc.esy.es/oie_transparent3.png" type="image/x-icon" />
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+    <style>
+        .logo-login{
+            margin-top:30px;
+        }
+    </style>
+</head>
+<!--
+    .boxed = boxed version
+-->
+<body>
+
+<div class="col-sm-12 text-center logo-login">
+    <img src="images/generic-logo.png">
+</div>
+
+<div class="padding-15">
+    <div class="login-box">
+
+<!--        <form class="login-form" method="post" style="background: transparent">-->
+<!--            <div class="row">-->
+<!--                <div class="input-field col s12 center">-->
+<!--                    <p class="center login-form-text">Acessar meu Escritório</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row margin">-->
+<!--                <div class="input-field col s12">-->
+<!--                    <i class="mdi-social-person-outline prefix"></i>-->
+<!--                    <input id="username" type="text" name="username">-->
+<!--                    <label for="username" class="center-align" >Nome de Usuário</label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row margin">-->
+<!--                <div class="input-field col s12">-->
+<!--                    <i class="mdi-action-lock-outline prefix"></i>-->
+<!--                    <input id="password" type="password" name="password">-->
+<!--                    <label for="password">Senha</label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="input-field col s12 m12 l12  login-text">-->
+<!--                    <input type="checkbox" id="remember-me" />-->
+<!--                    <label for="remember-me">Me lembre !</label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="g-recaptcha" data-sitekey="6LdYJy8UAAAAAFXIaLip_cJj3ofIkpWikXbLoJk1"></div>-->
+<!--            <div class="row">-->
+<!--                <div class="input-field col s12">-->
+<!--                    <button class="btn waves-effect waves col s12"  style="background-color: #004368" name="set-login" >Entrar</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <center>-->
+<!--                    <p><a href="register.php">Registrar !</a> | <a href="recuperar_senha.php">Esqueci minha senha </a></p>-->
+<!--                </center>-->
+<!--                <div class="input-field col s6 m6 l6">-->
+<!--                    <!--<p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--        </form>-->
+
+
+        <form action="" method="post" class="sky-form boxed">
+            <header><i class="fa fa-home"></i> Acessar meu Escritório</header>
+            <fieldset>
+
+                <section>
+                    <label class="label">Usuário</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-user"></i>
+                        <input type="text"  name="username" required >
+                        <span class="tooltip tooltip-top-right">Nome de Usuário</span>
+                    </label>
+                </section>
+
+                <section>
+                    <label class="label">Senha</label>
+                    <label class="input">
+                        <i class="icon-append fa fa-lock"></i>
+                        <input type="password" name="password" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Sua Senha';}">
+                        <b class="tooltip tooltip-top-right">Coloque Sua Senha</b>
+                    </label>
+                    <div class="col-md-10" style="padding-left: 0 !important; padding-top: 15px;">
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline" checked><i></i>Manter Conectado</label>
+                    </div>
+                    <div class="col-md-2" style="padding-right: 0!important;">
+                        <button type="submit" class="btn btn-success pull-right">Entrar</button>
+                    </div>
+                </section>
+            </fieldset>
+            <footer>
+                <div class="col-md-5" style="padding-left: 0!important; border-right: 1px solid #CCC;">
+                    <a href="register.php"><b>Não tem Conta?</b></a>
+                </div>
+                <div class="col-md-7" style="padding-right: 0!important;">
+                    <a href="recuperar_senha.php"><b>Esqueci minha senha</b> </a>
+                </div>
+            </footer>
+        </form>
+    </div>
+</div>
+<!-- JAVASCRIPT FILES -->
+<script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+<script type="text/javascript" src="assets/plugins/jquery/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>
+
+
+
+<?php die(); ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br" meta charset="UTF-8">
 <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">

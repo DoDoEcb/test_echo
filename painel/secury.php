@@ -20,7 +20,7 @@ $dolar = "3.14";
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <span class="fa fa-lock" style="font-size: 25px;"></span><br/>
-                            <label>Senha</label>
+                            <label>Senha Atual</label>
                             <input type="password" class="form-control" name="password" placeholder="Senha Atual" size="10" style="text-align: center; color:black" required="">
                         </div>
                     </div>
@@ -34,7 +34,7 @@ $dolar = "3.14";
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <span class="fa fa-lock" style="font-size: 25px;"></span><br/>
-                            <label>Nova Senha</label>
+                            <label>Confirmar Senha</label>
                             <input type="password" class="form-control" name="cpass" placeholder="Confirmar nova Senha" size="10" style="text-align: center; color:black" required="">
                         </div>
                     </div>

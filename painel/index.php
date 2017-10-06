@@ -163,14 +163,18 @@ $dolar = "3.14";
 </div>
 </section>
 
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h4 class="alert alert-success" id="myModalLabel">Pagar sua fatura </h4>
-        </div>
-        <center> <div class="modal-body">
-                <form method="post">
-                    <center>  <select class="form-control" name="up_kit" style="color: #000000;font-size: 12pt;font-family: bold; background: " >
+<!-- Modal -->
+<div class="modal fade" id="modal1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Pagar sua fatura</h4>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <select class="form-control" name="up_kit" style="color: #000000;font-size: 12pt;font-family: bold; background: " >
                             <?php
                             $sql = $pdo->pdo->prepare("SELECT * FROM plan where id>:plan");
                             $smtm = array(
@@ -186,12 +190,50 @@ $dolar = "3.14";
                                 }
                             }
                             ?>
-                        </select></center><br>
-                    <button class="btn btn-success" name="set-upgrade">Confimar</button>
-                </form>
-            </div></center>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button class="btn btn-success" name="set-upgrade"><i class="fa fa-check" style="font-size: 25px;"></i> Confirmar </button><br><br>
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>
+
+</div>
+
+
+<!--<div id="modal1" class="modal">-->
+<!--    <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--            <h4 class="alert alert-success" id="myModalLabel">Pagar sua fatura </h4>-->
+<!--        </div>-->
+<!--        <center> <div class="modal-body">-->
+<!--                <form method="post">-->
+<!--                    <center>  <select class="form-control" name="up_kit" style="color: #000000;font-size: 12pt;font-family: bold; background: " >-->
+<!--                            --><?php
+//                            $sql = $pdo->pdo->prepare("SELECT * FROM plan where id>:plan");
+//                            $smtm = array(
+//                                "plan" => $kit->id
+//                            );
+//                            $sql->execute($smtm);
+//                            if($sql->rowCount()>0){
+//                                $res = $sql->fetchAll(PDO::FETCH_OBJ);
+//                                foreach($res as $row){
+//                                    ?>
+<!--                                    <option value="--><?php //echo $row->name ?><!--"><b>--><?php //echo $row->name ?><!-- | --><?php //echo number_format($row->price_btc,8,".",".")?><!--  BTC </option>-->
+<!--                                    --><?php
+//                                }
+//                            }
+//                            ?>
+<!--                        </select></center><br>-->
+<!--                    <button class="btn btn-success" name="set-upgrade">Confimar</button>-->
+<!--                </form>-->
+<!--            </div></center>-->
+<!--    </div>-->
+<!--</div>-->
 
 <div id="myModalr" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
