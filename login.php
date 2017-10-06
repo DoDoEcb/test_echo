@@ -2,11 +2,9 @@
 ini_set('display_errors', 0);
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);
-
 if(isset($_POST['set-login'])){
     require_once("scripts/Classes/Login.php");
     $Login = new Login();
-
     if($Login->Logar($_POST['username'],md5($_POST['password'])) == true){
         session_start();
         $_SESSION['username'] = $_POST['username'];
@@ -30,13 +28,10 @@ if(isset($_POST['set-login'])){
     <title>ShopWebDesigner</title>
     <meta name="description" content="Acessar Minha Conta" />
     <meta name="Author" content="Bem Vindo ao Login" />
-
     <!-- mobile settings -->
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
-
     <!-- WEB FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
-
     <!-- CORE CSS -->
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="icon" href="http://demoscriptbtc.esy.es/oie_transparent3.png" type="image/x-icon" />
@@ -50,66 +45,15 @@ if(isset($_POST['set-login'])){
         }
     </style>
 </head>
-<!--
-    .boxed = boxed version
--->
 <body>
-
 <div class="col-sm-12 text-center logo-login">
     <img src="images/generic-logo.png">
 </div>
-
 <div class="padding-15">
     <div class="login-box">
-
-<!--        <form class="login-form" method="post" style="background: transparent">-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s12 center">-->
-<!--                    <p class="center login-form-text">Acessar meu Escritório</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row margin">-->
-<!--                <div class="input-field col s12">-->
-<!--                    <i class="mdi-social-person-outline prefix"></i>-->
-<!--                    <input id="username" type="text" name="username">-->
-<!--                    <label for="username" class="center-align" >Nome de Usuário</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row margin">-->
-<!--                <div class="input-field col s12">-->
-<!--                    <i class="mdi-action-lock-outline prefix"></i>-->
-<!--                    <input id="password" type="password" name="password">-->
-<!--                    <label for="password">Senha</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s12 m12 l12  login-text">-->
-<!--                    <input type="checkbox" id="remember-me" />-->
-<!--                    <label for="remember-me">Me lembre !</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="g-recaptcha" data-sitekey="6LdYJy8UAAAAAFXIaLip_cJj3ofIkpWikXbLoJk1"></div>-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s12">-->
-<!--                    <button class="btn waves-effect waves col s12"  style="background-color: #004368" name="set-login" >Entrar</button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <center>-->
-<!--                    <p><a href="register.php">Registrar !</a> | <a href="recuperar_senha.php">Esqueci minha senha </a></p>-->
-<!--                </center>-->
-<!--                <div class="input-field col s6 m6 l6">-->
-<!--                    <!--<p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--        </form>-->
-
-
         <form method="post" class="sky-form boxed">
             <header><i class="fa fa-home"></i> Acessar meu Escritório</header>
             <fieldset>
-
                 <section>
                     <label class="label">Usuário</label>
                     <label class="input">
@@ -118,7 +62,6 @@ if(isset($_POST['set-login'])){
                         <span class="tooltip tooltip-top-right">Nome de Usuário</span>
                     </label>
                 </section>
-
                 <section>
                     <label class="label">Senha</label>
                     <label class="input">
