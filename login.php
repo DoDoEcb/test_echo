@@ -5,7 +5,6 @@ error_reporting(E_ALL);
 
 if(isset($_POST['set-login'])){
     require_once("scripts/Classes/Login.php");
-
     $Login = new Login();
 
     if($Login->Logar($_POST['username'],md5($_POST['password'])) == true){
@@ -107,7 +106,7 @@ if(isset($_POST['set-login'])){
 <!--        </form>-->
 
 
-        <form action="" method="post" class="sky-form boxed">
+        <form method="post" class="sky-form boxed">
             <header><i class="fa fa-home"></i> Acessar meu Escritório</header>
             <fieldset>
 
@@ -115,7 +114,7 @@ if(isset($_POST['set-login'])){
                     <label class="label">Usuário</label>
                     <label class="input">
                         <i class="icon-append fa fa-user"></i>
-                        <input type="text"  name="username" required >
+                        <input type="text"  name="username" required autofocus>
                         <span class="tooltip tooltip-top-right">Nome de Usuário</span>
                     </label>
                 </section>
@@ -124,14 +123,14 @@ if(isset($_POST['set-login'])){
                     <label class="label">Senha</label>
                     <label class="input">
                         <i class="icon-append fa fa-lock"></i>
-                        <input type="password" name="password" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Sua Senha';}">
+                        <input type="password" name="password" required >
                         <b class="tooltip tooltip-top-right">Coloque Sua Senha</b>
                     </label>
                     <div class="col-md-10" style="padding-left: 0 !important; padding-top: 15px;">
-                        <label class="checkbox"><input type="checkbox" name="checkbox-inline" checked><i></i>Manter Conectado</label>
+                        <label class="checkbox"><input type="checkbox" name="checkbox-inline" id="remember-me" checked><i></i>Manter Conectado</label>
                     </div>
                     <div class="col-md-2" style="padding-right: 0!important;">
-                        <button type="submit" class="btn btn-success pull-right">Entrar</button>
+                        <button type="submit" class="btn btn-success pull-right" name="set-login">Entrar</button>
                     </div>
                 </section>
             </fieldset>
